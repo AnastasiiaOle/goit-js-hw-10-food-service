@@ -1,11 +1,9 @@
-document.body.classList.add('light-theme')
-
 import './styles.css';
 import cardsTemplate from './templates/cards.hbs';
 
 import cards from './menu.json';
 
-
+document.body.classList.add('light-theme');
 
 const markup = cardsTemplate(cards);
 const galleryRef = document.querySelector('.js-menu');
