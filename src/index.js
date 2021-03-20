@@ -2,6 +2,7 @@ import './styles.css';
 import cardsTemplate from './templates/cards.hbs';
 
 import cards from './menu.json';
+document.body.classList.add('light-theme')
 
 const markup = cardsTemplate(cards);
 const galleryRef = document.querySelector('.js-menu');
@@ -11,9 +12,9 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
+
 const bodyRef = document.querySelector('body');
 const switchRef = document.querySelector('#theme-switch-toggle');
-document.body.classList.add('light-theme')
 
 switchRef.addEventListener('change', handleCheckbox);
 reloadTheme()
