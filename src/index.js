@@ -14,7 +14,7 @@ const Theme = {
 
   const bodyRef = document.querySelector('body');
   const switchRef = document.querySelector('#theme-switch-toggle');
-  
+  bodyRef.classList.add(Theme.LIGHT);
 
 
 switchRef.addEventListener('change', handleCheckbox);
@@ -31,13 +31,16 @@ function handleCheckbox() {
     bodyRef.classList.add(Theme.LIGHT);
     localStorage.setItem('theme', Theme.LIGHT);
   }
+   
 }
 
 function reloadTheme() {
   if (localStorage.getItem('theme') === Theme.DARK) {
     bodyRef.classList.add(Theme.DARK);
     switchRef.checked = true;
+    
   }
+
 }
 
 
