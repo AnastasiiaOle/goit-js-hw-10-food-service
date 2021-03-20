@@ -6,16 +6,14 @@ import cards from './menu.json';
 const markup = cardsTemplate(cards);
 const galleryRef = document.querySelector('.js-menu');
 galleryRef.insertAdjacentHTML('afterbegin', markup);
-
 const Theme = {
-    LIGHT: 'light-theme',
-    DARK: 'dark-theme',
-  };
+  LIGHT: 'light-theme',
+  DARK: 'dark-theme',
+};
 
-  const bodyRef = document.querySelector('body');
-  const switchRef = document.querySelector('#theme-switch-toggle');
-  bodyRef.classList.add(Theme.LIGHT);
-
+const bodyRef = document.querySelector('body');
+const switchRef = document.querySelector('#theme-switch-toggle');
+bodyRef.classList.add(Theme.LIGHT);
 
 switchRef.addEventListener('change', handleCheckbox);
 reloadTheme()
