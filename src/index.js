@@ -13,7 +13,7 @@ const Theme = {
 
 const bodyRef = document.querySelector('body');
 const switchRef = document.querySelector('#theme-switch-toggle');
-bodyRef.classList.add(Theme.LIGHT);
+document.body.classList.add('light-theme')
 
 switchRef.addEventListener('change', handleCheckbox);
 reloadTheme()
